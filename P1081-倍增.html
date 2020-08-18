@@ -18,7 +18,7 @@
   
   <title>题目题解-开车旅行 - Hunter&#39;s Blog</title>
   
-    <meta name="keywords" content="luogu,双向链表,倍增">
+    <meta name="keywords" content="luogu,倍增,双向链表">
   
 
   
@@ -56,10 +56,6 @@ A、B的开车风格：
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
   
-
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
 
   
 
@@ -633,7 +629,7 @@ A、B的开车风格：
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>双向链表</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>双向链表</p></a></div>
 
 
         
@@ -681,7 +677,7 @@ $$\sum^k_{i=1}{c^2_i}$$
       <p ct><i class='fas fa-comments'></i> 评论</p>
       
       <section id="comments">
-        <div id="minivaline_container">
+        <div id="valine_container" class="valine_thread">
   <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
@@ -1370,54 +1366,72 @@ $$\sum^k_{i=1}{c^2_i}$$
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/minivaline@3/dist/MiniValine.min.js"></script>
-
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
-function pjax_minivaline() {
-  let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
-      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
-  let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
-    "快来评论吧~" : $.trim($('#pjax-comment-placeholder').text());
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link'.split(',').filter(function (item) {
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick', 'mail', 'link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function (item) {
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
 
-  let ALLPATH = '';
-  if(ALLPATH != '') pageUrl = ALLPATH;
-
-  new MiniValine({
-    el: '#minivaline_container',
-    appId: '',
-    appKey: '',
-    mode: 'xCss',
-    placeholder: pagePlaceholder,
-    path: pageUrl,
-    lang: '',
-    adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
-    tagMeta: ["管理员", "小伙伴", "访客"],
-    master: ["de8a7aa53d07e6b6bceb45c64027763d"],
-    friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
-    math: false,  /*布尔值 字符串无效 下同*/
-    md: true,
-    enableQQ: false,
-    NoRecordIP: false,
-    visitor: false,
-    maxNest: 6,
-    pageSize: 6,
-    barrager: 0,
-    role: 'admin',
-    closeFlag: false,
-    cloudflag: false,
-    region: false,
-    closeUA: false,
-    emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
-    serverURLs: ''
-    });
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
   }
+
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+
+  function pjax_valine() {
+    let pageUrl = $.trim($('#pjax-comment-path').text()) === "none" ? 
+      decodeURI(window.location.pathname) : $.trim($('#pjax-comment-path').text());
+    let pagePlaceholder = $.trim($('#pjax-comment-placeholder').text()) === "none" ?
+      "来一发评论吗,记得留下邮箱哦,有回复时你将收到提醒" : $.trim($('#pjax-comment-placeholder').text());
+
+    let ALLPATH = '';
+    if(ALLPATH != '') pageUrl = ALLPATH;
+
+    var valine = new Valine();
+    valine.init({
+      el: '#valine_container',
+      meta: meta,
+      placeholder: pagePlaceholder,
+      path: pageUrl,
+      appId: "xmN2WESMajxugNv9wktFc00N-gzGzoHsz",
+      appKey: "lSKIWD0fcfPvGCrAUBOWXrX1",
+      pageSize: '10',
+      avatar: 'retro',
+      lang: 'zh-cn',
+      visitor: 'true',
+      highlight: 'false',
+      mathJax: 'false',
+      enableQQ: 'false',
+      requiredFields: requiredFields,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps
+    })
+  }
+
   $(function () {
-    pjax_minivaline();
+    pjax_valine();
   });
 </script>
 
@@ -1444,21 +1458,10 @@ function pjax_minivaline() {
 
 
 
+
+
   
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
 
 
 
@@ -1573,8 +1576,8 @@ function pjax_minivaline() {
           pjax_initCopyCode();
         
         
+          pjax_valine();
         
-          pjax_minivaline();
         
         
         
