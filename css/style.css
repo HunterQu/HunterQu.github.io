@@ -1776,9 +1776,11 @@ pre {
   -moz-transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
+  filter: grayscale(100%);
 }
 .highlight:hover {
   background: #fff7ea;
+  filter: grayscale(0%);
 }
 .highlight:hover figcaption {
   transition: all 0.28s ease;
