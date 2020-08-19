@@ -74,6 +74,20 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b04a4e9020880c12d415295da22ece5";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -546,9 +560,9 @@
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>怎么做到的呢，它运用了<code>倍增</code>的思想。</p>
 <p>拿最大值来说我们用$Max[i][j]$表示，从$i$位置开始的$2^j$个数中的最大值，例如$Max[i][1]$表示的是$i$位置和$i+1$位置中两个数的最大值(也就是说当前位置是被包含进$2^j$个数去的)</p>
 <p>那么转移的时候我们可以把当前区间拆成两个区间并分别取最大值（注意这里的编号是从$1$开始的）</p>
-<p><img src="https://hntr.xyz/img/st/transfer.jpg" alt="transfer"></p>
+<p><img src="https://hntr.xyz/img/st/transfer.jpg" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/st/transfer.jpg" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" alt="transfer"></p>
 <p>查询的时候也比较简单<br>我们计算出$log_2{lenth}$,然后对于左端点和右端点分别进行查询，这样可以保证一定可以覆盖查询的区间</p>
-<p><img src="https://hntr.xyz/img/st/ask.jpg" alt="transfer"></p>
+<p><img src="https://hntr.xyz/img/st/ask.jpg" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/st/ask.jpg" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" alt="transfer"></p>
 <p>所以就有了这两个边界，$[l,l+2^k-1]$, $[r-2^k+1,r]$<br>至于为什么会是$[r-2^k+1,r]$，你只要设左端点为$x$, 并且$x$满足$x + 2^k - 1 = r$, 然后就可以推出来了。</p>
 <h3 id="例题和代码"><a href="#例题和代码" class="headerlink" title="例题和代码"></a>例题和代码</h3><p>给定一个长度为 $N$ 的数列，和 $M$ 次询问，求出每一次询问的区间内数字的最大值。</p>
 <p>上代码</p>
@@ -1176,6 +1190,33 @@ LCA的实...</p>
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
@@ -1507,6 +1548,8 @@ LCA的实...</p>
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
       // 
 
       // 关于谷歌统计对 SPA 页面的处理：

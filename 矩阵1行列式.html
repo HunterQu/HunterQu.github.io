@@ -73,6 +73,20 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b04a4e9020880c12d415295da22ece5";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -543,7 +557,7 @@
 <a id="more"></a>
 
 <h2 id="先导概念：行列式-（一大堆）"><a href="#先导概念：行列式-（一大堆）" class="headerlink" title="先导概念：行列式~~（一大堆）"></a>先导概念：行列式~~（一大堆）</h2><h3 id="数学概念"><a href="#数学概念" class="headerlink" title="数学概念"></a>数学概念</h3><p>行列式在数学中，是一个函数，其定义域为det的矩阵A，取值为一个标量，写作det(A)或 | A | 。无论是在线性代数、多项式理论，还是在微积分学中（比如说换元积分法中），行列式作为基本的数学工具，都有着重要的应用。<br>行列式可以看做是有向面积或体积的概念在一般的欧几里得空间中的推广。或者说，在 n 维欧几里得空间中，行列式描述的是一个线性变换对“体积”所造成的影响。</p>
-<p>n阶行列式的定义<br><img src="https://hunterqu.github.io/img/HLS/HLS-EX.png" alt="EX"></p>
+<p>n阶行列式的定义<br><img src="https://hunterqu.github.io/img/HLS/HLS-EX.png" class="lazyload placeholder" data-srcset="https://hunterqu.github.io/img/HLS/HLS-EX.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" alt="EX"></p>
 <h3 id="n阶行列式求值"><a href="#n阶行列式求值" class="headerlink" title="n阶行列式求值"></a>n阶行列式求值</h3><p>过于复杂，懒得写上来😓</p>
 <h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>1.行列式A中某行(或列)用同一数k乘,其结果等于kA。<br>2.行列式A等于其转置行列式AT(AT的第i行为A的第i列)。<br>3.若n阶行列式|αij|中某行(或列);行列式则|αij|是两个行列式的和，这两个行列式的第i行(或列),一个是b1,b2,…,bn；另一个是с1，с2,…,сn；其余各行（或列）上的元与|αij|的完全一样。<br>4.行列式A中两行（或列）互换,其结果等于-A。 ⑤把行列式A的某行（或列）中各元同乘一数后加到另一行（或列）中各对应元上，结果仍然是A。</p>
 <p>结束~~<br>让我们看看百度百科对于行列式的看法/滑稽</p>
@@ -1120,6 +1134,33 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
@@ -1451,6 +1492,8 @@
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
       // 
 
       // 关于谷歌统计对 SPA 页面的处理：

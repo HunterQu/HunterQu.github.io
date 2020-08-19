@@ -78,6 +78,20 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b04a4e9020880c12d415295da22ece5";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -557,9 +571,9 @@
 <p>不然会死循环或者浪费时间等一大堆事</p>
 <h2 id="广搜：层层递进"><a href="#广搜：层层递进" class="headerlink" title="广搜：层层递进"></a>广搜：层层递进</h2><p>对＜（＾－＾）＞特点就是层层递进</p>
 <p>在走迷宫这道题目中 广搜就像这样↓</p>
-<p><img src="https://i.loli.net/2019/06/09/5cfd0e2dd55ed14327.png" alt="5cfd0e2dd55ed14327"></p>
+<p><img src="https://i.loli.net/2019/06/09/5cfd0e2dd55ed14327.png" class="lazyload placeholder" data-srcset="https://i.loli.net/2019/06/09/5cfd0e2dd55ed14327.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" alt="5cfd0e2dd55ed14327"></p>
 <p>层层递进</p>
-<p><img src="https://i.loli.net/2019/06/09/5cfd0e7c38a6860476.png" alt="5cfd0e7c38a6860476"></p>
+<p><img src="https://i.loli.net/2019/06/09/5cfd0e7c38a6860476.png" class="lazyload placeholder" data-srcset="https://i.loli.net/2019/06/09/5cfd0e7c38a6860476.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" alt="5cfd0e7c38a6860476"></p>
 <p>使用两个坐标的队列以及一个<code>step</code>的队列记录，同时在每个节点进行扩展</p>
 <p>总结：好好利用搜索可以解决很多循环无法解决的问题，但边界条件要设置好，以及每次调用函数时的数据要对应。</p>
 
@@ -1136,6 +1150,33 @@ P1036 通过深搜实现
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
@@ -1467,6 +1508,8 @@ P1036 通过深搜实现
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
       // 
 
       // 关于谷歌统计对 SPA 页面的处理：

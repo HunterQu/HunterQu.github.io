@@ -76,6 +76,20 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b04a4e9020880c12d415295da22ece5";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -545,22 +559,22 @@
           <p>题目描述详见 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P5023">luogu</a></p>
 <p>题目可以说是非常的长，但是读懂之后概括一下大概就是找到一种填写01的方式，使得任意取两条合法（从$(1,1)$向右向下走到右下角）的路径， 右上路径经过的数字连接成的字符串字典序小。</p>
 <p>然后就是漫长的手模＋找规律</p>
-<p>在模拟$3*3$时，第一次模拟出来的结果非常amazing，竟然有144种<br>在我的理解中，我认为只要是左下-右上走向的线上的数字不递增就可以了<br>如图<br><img src="https://hntr.xyz/img/5023/wrong.png"></p>
+<p>在模拟$3*3$时，第一次模拟出来的结果非常amazing，竟然有144种<br>在我的理解中，我认为只要是左下-右上走向的线上的数字不递增就可以了<br>如图<br><img src="https://hntr.xyz/img/5023/wrong.png" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/5023/wrong.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <p>如图$4 \times 4 \times 3 \times 3=144$</p>
 <p>但是显然 这是错误的</p>
 <p>正确解法：</p>
 <a id="more"></a>
 
-<p>对于上面我的那种天真的想法，这就是一个反例<br><img src="https://hntr.xyz/img/5023/1.png"></p>
+<p>对于上面我的那种天真的想法，这就是一个反例<br><img src="https://hntr.xyz/img/5023/1.png" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/5023/1.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <p>这种交叉的情况下，就要分类讨论</p>
 <p>1.当$n=1$时：</p>
 <p>很明显，答案是$m^{2}$ 这里就不多讨论了。</p>
 <p>2.当$n&gt;1$ 且 $n=m$时</p>
 <p>（$n = 3$）</p>
-<p><img src="https://hntr.xyz/img/5023/2.png"></p>
+<p><img src="https://hntr.xyz/img/5023/2.png" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/5023/2.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <p>图中橙色数字为这一平行线的可能数量， 红色为填入的数字， 蓝色为平行线， 蓝色区域填入的数字必须相等，否则会导致交叉情况出错</p>
 <p>（$n = 4$）</p>
-<p><img src="https://hntr.xyz/img/5023/3.png"></p>
+<p><img src="https://hntr.xyz/img/5023/3.png" class="lazyload placeholder" data-srcset="https://hntr.xyz/img/5023/3.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <p>……</p>
 <p>会发现</p>
 <p>$$<br>ans(3,3) = 2^2 \times 3 \times 4 + 2^4 \times 4 \<br>ans(4,4) = 2^5 \times 5+2^4\times3\times5+2^5\times4^2\<br>ans(5,5) = 2^7\times4\times5+2^5\times3\times5+2^6\times4^3<br>$$</p>
@@ -1181,6 +1195,33 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
@@ -1512,6 +1553,8 @@
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
       // 
 
       // 关于谷歌统计对 SPA 页面的处理：

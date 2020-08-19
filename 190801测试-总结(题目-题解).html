@@ -74,6 +74,20 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+	  setTimeout(function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?4b04a4e9020880c12d415295da22ece5";
+		hm.defer=true;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+	  }, 5000);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -552,7 +566,7 @@
 <h3 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">p</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">bool</span> f = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="built_in">sqrt</span>(x); i++)</span><br><span class="line">        <span class="keyword">if</span> (x % i == <span class="number">0</span>) &#123;</span><br><span class="line">            f = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// freopen(&quot;prime.in&quot;,&quot;r&quot;,stdin);</span></span><br><span class="line">    <span class="comment">// freopen(&quot;prime.out&quot;,&quot;w&quot;,stdout);</span></span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;<span class="comment">//有问题就交换一下</span></span><br><span class="line">    <span class="keyword">if</span> (x &gt; y)</span><br><span class="line">        swap(x, y);</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = x; i &lt;= y; i++)</span><br><span class="line">        <span class="keyword">if</span> (p(i) &amp;&amp; i != <span class="number">1</span>)</span><br><span class="line">            ans++;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-火车调度序列统计"><a href="#2-火车调度序列统计" class="headerlink" title="2.火车调度序列统计"></a>2.火车调度序列统计</h2><p>就是Catalan数（<del>虽然知道但是还是没有AC</del>）</p>
-<h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>有辆各不相同的火车在车道上等待出站（火车的两端都可以当动力源），火车进站前可以通过一个调度站调整火车出站次序，调度站不限定所能停放的火车数量，每次只能进或出一辆火车。请你编程求出辆火车的不同出站序列的总数。<br><img src="https://i.loli.net/2019/08/02/5d43c06c75c9454877.png"></p>
+<h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>有辆各不相同的火车在车道上等待出站（火车的两端都可以当动力源），火车进站前可以通过一个调度站调整火车出站次序，调度站不限定所能停放的火车数量，每次只能进或出一辆火车。请你编程求出辆火车的不同出站序列的总数。<br><img src="https://i.loli.net/2019/08/02/5d43c06c75c9454877.png" class="lazyload placeholder" data-srcset="https://i.loli.net/2019/08/02/5d43c06c75c9454877.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h3><p>一个数$n,(1&lt;=n&lt;=1000)$</p>
 <h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h3><p>一个数，即可能输出序列的总数目。</p>
 <h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h3><h4 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入"></a>样例输入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
@@ -565,7 +579,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100001</span>],h=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n+<span class="number">2</span>;i&lt;=n*<span class="number">2</span>;i++)<span class="comment">//高精度乘单精度</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;h;j++)</span><br><span class="line">            a[j]*=i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">100001</span>;j++)<span class="comment">//进位处理</span></span><br><span class="line">        <span class="keyword">if</span> (a[j]/<span class="number">10</span>&gt;<span class="number">0</span>) &#123;</span><br><span class="line">            a[j+<span class="number">1</span>]+=a[j]/<span class="number">10</span>;</span><br><span class="line">            a[j]=a[j]%<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        h=<span class="number">100001</span>;</span><br><span class="line">        <span class="keyword">while</span> (a[h]==<span class="number">0</span>) h--;<span class="comment">//扫一遍找h</span></span><br><span class="line">        h++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++) <span class="comment">//高精度除单精度</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=h<span class="number">-1</span>;j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[j]%i!=<span class="number">0</span>)</span><br><span class="line">                a[j<span class="number">-1</span>]+=<span class="number">10</span>*(a[j]%i);</span><br><span class="line">            a[j]=a[j]/i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    h=<span class="number">100001</span>;</span><br><span class="line">    <span class="keyword">while</span> (a[h]==<span class="number">0</span>) h--;<span class="comment">//扫一遍找h</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=h;i&gt;=<span class="number">0</span>;i--)<span class="comment">//输出</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="贪心的小精灵"><a href="#贪心的小精灵" class="headerlink" title="贪心的小精灵"></a>贪心的小精灵</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>圣诞节到了，一个小精灵想在圣诞树上拿到小礼物。圣诞树一共有$n$层高，在圣诞树的第$k$层，一共有个$k$放置礼物的礼物点，每个礼物点有对应的礼物数量。$(1&lt;=k&lt;=n)$。小精灵必须从圣诞树的最顶端(1,1)开始拿礼物，每层只能拿从一个礼物点拿对应数量的礼物。小精灵很懒，他每次只会向距离最近的礼物点前进。圣诞树上有个特殊的礼物点，那里的礼物是小精灵必须要拿到的。小精灵既想要经过特殊点，又想要在圣诞树上拿到最多的礼物，请你帮他算出他最多能拿到多少个礼物。</p>
-<p><img src="https://i.loli.net/2019/08/02/5d43c0cb30e6068092.png"></p>
+<p><img src="https://i.loli.net/2019/08/02/5d43c0cb30e6068092.png" class="lazyload placeholder" data-srcset="https://i.loli.net/2019/08/02/5d43c0cb30e6068092.png" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif"></p>
 <h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h3><p>第1行只有一个整数$n$，表示$n$层圣诞树；</p>
 <p>第2到$n+1$行，每层每个礼物点的礼物数量，数字之间有一个空格；</p>
 <p>第$n+2$行有两个数$x$和$y$，表示小精灵必须要经过的礼物点，即第$x$层的第$y$个礼物点。</p>
@@ -1214,6 +1228,33 @@
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
@@ -1545,6 +1586,8 @@
       // 关于百度统计对 SPA 页面的处理：
       // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
       // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+      // 
+      // _hmt.push(['_trackPageview', document.location.pathname]);
       // 
 
       // 关于谷歌统计对 SPA 页面的处理：
