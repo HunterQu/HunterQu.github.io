@@ -559,7 +559,7 @@
 <a id="more"></a>
 
 <h2 id="先导概念：行列式-（一大堆）"><a href="#先导概念：行列式-（一大堆）" class="headerlink" title="先导概念：行列式~~（一大堆）"></a>先导概念：行列式~~（一大堆）</h2><h3 id="数学概念"><a href="#数学概念" class="headerlink" title="数学概念"></a>数学概念</h3><p>行列式在数学中，是一个函数，其定义域为det的矩阵A，取值为一个标量，写作det(A)或 | A | 。无论是在线性代数、多项式理论，还是在微积分学中（比如说换元积分法中），行列式作为基本的数学工具，都有着重要的应用。<br>行列式可以看做是有向面积或体积的概念在一般的欧几里得空间中的推广。或者说，在 n 维欧几里得空间中，行列式描述的是一个线性变换对“体积”所造成的影响。</p>
-<p>n阶行列式的定义<br><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://hunterqu.github.io/img/HLS/HLS-EX.png" alt="EX"></p>
+<p>n阶行列式的定义<br><img src="https://hunterqu.github.io/img/HLS/HLS-EX.png" alt="EX"></p>
 <h3 id="n阶行列式求值"><a href="#n阶行列式求值" class="headerlink" title="n阶行列式求值"></a>n阶行列式求值</h3><p>过于复杂，懒得写上来😓</p>
 <h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>1.行列式A中某行(或列)用同一数k乘,其结果等于kA。<br>2.行列式A等于其转置行列式AT(AT的第i行为A的第i列)。<br>3.若n阶行列式|αij|中某行(或列);行列式则|αij|是两个行列式的和，这两个行列式的第i行(或列),一个是b1,b2,…,bn；另一个是с1，с2,…,сn；其余各行（或列）上的元与|αij|的完全一样。<br>4.行列式A中两行（或列）互换,其结果等于-A。 ⑤把行列式A的某行（或列）中各元同乘一数后加到另一行（或列）中各对应元上，结果仍然是A。</p>
 <p>结束~~<br>让我们看看百度百科对于行列式的看法/滑稽</p>
@@ -1088,7 +1088,7 @@
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1106,15 +1106,15 @@
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -1131,33 +1131,6 @@
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -1543,10 +1516,5 @@
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>

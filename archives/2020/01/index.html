@@ -571,7 +571,7 @@
             
               
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LCA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LCA</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LCA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LCA</p></a></div>
 
 
             
@@ -1034,8 +1034,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Aug 19 2020 19:27:45 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2020-08-19 日</div>
+            <div id="last-update" style="display: none;">Sun Aug 30 2020 16:06:39 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2020-08-30 日</div>
           
         </div>
         
@@ -1085,7 +1085,7 @@
           try { 
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate)); 
           } catch (error) { 
-            document.getElementById('last-update-show').innerHTML = '2020-08-19 日'; 
+            document.getElementById('last-update-show').innerHTML = '2020-08-30 日'; 
           } 
         </script> 
         
@@ -1556,7 +1556,7 @@
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1574,15 +1574,15 @@
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -1599,33 +1599,6 @@
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -2011,10 +1984,5 @@
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>

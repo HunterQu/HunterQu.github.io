@@ -583,7 +583,7 @@
 
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="http://ybt.ssoier.cn:8088/problem_show.php?pid=1258">原链接</a></p>
 <h3 id="【题目描述】"><a href="#【题目描述】" class="headerlink" title="【题目描述】"></a>【题目描述】</h3><p>观察下面的数字金字塔。写一个程序查找从最高点到底部任意处结束的路径，使路径经过数字的和最大。每一步可以从当前点走到左下方的点也可以到达右下方的点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="http://ybt.ssoier.cn:8088/pic/1284.gif" alt="TOWER"></p>
+<p><img src="http://ybt.ssoier.cn:8088/pic/1284.gif" alt="TOWER"></p>
 <p>在上面的样例中,从13到8到26到15到24的路径产生了最大的和86。</p>
       
     </div>
@@ -1044,7 +1044,7 @@
       
         <p>学习内容：队列与链表</p>
 <h3 id="队列："><a href="#队列：" class="headerlink" title="队列："></a>队列：</h3><p>通过数组进行队列操作，会费时间较多如图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://i.loli.net/2019/06/07/5cfa181397ae265980.png" alt="5cfa181397ae265980"></p>
+<p><img src="https://i.loli.net/2019/06/07/5cfa181397ae265980.png" alt="5cfa181397ae265980"></p>
 <p>每次删除会交换位置，时间较长</p>
 <p>于是用指针（我喜欢用int）来记录队列首位末尾便可以快速完成</p>
 <p>不多说了</p>
@@ -1801,8 +1801,8 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Wed Aug 19 2020 19:27:47 GMT+0800 (中国标准时间)</div>
-            <div id="last-update-show">2020-08-19 日</div>
+            <div id="last-update" style="display: none;">Sun Aug 30 2020 16:06:41 GMT+0800 (中国标准时间)</div>
+            <div id="last-update-show">2020-08-30 日</div>
           
         </div>
         
@@ -1852,7 +1852,7 @@
           try { 
             document.getElementById('last-update-show').innerHTML = timeago(new Date(lastUpDate)); 
           } catch (error) { 
-            document.getElementById('last-update-show').innerHTML = '2020-08-19 日'; 
+            document.getElementById('last-update-show').innerHTML = '2020-08-30 日'; 
           } 
         </script> 
         
@@ -2262,7 +2262,7 @@
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -2280,15 +2280,15 @@
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -2305,33 +2305,6 @@
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -2717,10 +2690,5 @@
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>

@@ -573,9 +573,9 @@
 <p>不然会死循环或者浪费时间等一大堆事</p>
 <h2 id="广搜：层层递进"><a href="#广搜：层层递进" class="headerlink" title="广搜：层层递进"></a>广搜：层层递进</h2><p>对＜（＾－＾）＞特点就是层层递进</p>
 <p>在走迷宫这道题目中 广搜就像这样↓</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://i.loli.net/2019/06/09/5cfd0e2dd55ed14327.png" alt="5cfd0e2dd55ed14327"></p>
+<p><img src="https://i.loli.net/2019/06/09/5cfd0e2dd55ed14327.png" alt="5cfd0e2dd55ed14327"></p>
 <p>层层递进</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://i.loli.net/2019/06/09/5cfd0e7c38a6860476.png" alt="5cfd0e7c38a6860476"></p>
+<p><img src="https://i.loli.net/2019/06/09/5cfd0e7c38a6860476.png" alt="5cfd0e7c38a6860476"></p>
 <p>使用两个坐标的队列以及一个<code>step</code>的队列记录，同时在每个节点进行扩展</p>
 <p>总结：好好利用搜索可以解决很多循环无法解决的问题，但边界条件要设置好，以及每次调用函数时的数据要对应。</p>
 
@@ -1104,7 +1104,7 @@ P1036 通过深搜实现
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1122,15 +1122,15 @@ P1036 通过深搜实现
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -1147,33 +1147,6 @@ P1036 通过深搜实现
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -1559,10 +1532,5 @@ P1036 通过深搜实现
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>

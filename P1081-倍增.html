@@ -18,7 +18,7 @@
   
   <title>题目题解-开车旅行 - Hunter&#39;s Blog</title>
   
-    <meta name="keywords" content="luogu,倍增,双向链表">
+    <meta name="keywords" content="luogu,双向链表,倍增">
   
 
   
@@ -579,7 +579,7 @@ A、B的开车风格：
 <p>那么转移的时候我们可以把当前区间拆成两个区间并分别取最大值</p>
 <p>比如</p>
 <a id="more"></a>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://hntr.xyz/img/st/transfer.jpg" alt="transfer"></p>
+<p><img src="https://hntr.xyz/img/st/transfer.jpg" alt="transfer"></p>
 <p>$$<br>f[i][j] = \max{f[i][j - 1], f[i + (1 &lt;&lt; (j - 1))][j - 1]}<br>$$</p>
 <p>上面就是一般倍增用来求最大值时候的转移式(没什么用不用看</p>
 <p>另一个倍增的常见应用就是$LCA$</p>
@@ -591,7 +591,7 @@ A、B的开车风格：
 <p>首先就要处理出对于到达每一个城市$a_i$   $A$和$B$的下一步会去哪里</p>
 <p>这一步可以用一个双向链表 开始的时候将城市从低到高排序并且相邻的相连</p>
 <p>就像这个</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" srcset="https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/img-loading.gif" data-original="https://i.loli.net/2020/08/08/4QHkoeWvg1d2JtL.png" alt="image.png"></p>
+<p><img src="https://i.loli.net/2020/08/08/4QHkoeWvg1d2JtL.png" alt="image.png"></p>
 <p>排序完之后的顺序是  3 1 2 4</p>
 <p>每一个点都与旁边相连</p>
 <p>之后从原来顺序开始处理 不断选出A和B的选择然后删除这个节点 就可以处理完 <code>na</code>和<code>nb</code>数组</p>
@@ -645,7 +645,7 @@ A、B的开车风格：
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>双向链表</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/luogu/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>luogu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>双向链表</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%80%8D%E5%A2%9E/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>倍增</p></a></div>
 
 
         
@@ -1183,7 +1183,7 @@ $$\sum^k_{i=1}{c^2_i}$$
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1201,15 +1201,15 @@ $$\sum^k_{i=1}{c^2_i}$$
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -1226,33 +1226,6 @@ $$\sum^k_{i=1}{c^2_i}$$
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -1638,10 +1611,5 @@ $$\sum^k_{i=1}{c^2_i}$$
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>

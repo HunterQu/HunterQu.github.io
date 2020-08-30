@@ -559,9 +559,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://cdn.jsdelivr.net/gh/Sanarous/files/images/avatar.jpeg'/>
-                            
+                            <img class='avatar' src='https://cdn.jsdelivr.net/gh/Sanarous/files/images/avatar.jpeg'/>
                           
                         
                       </div>
@@ -581,9 +579,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://cdn.luogu.com.cn/upload/usericon/10279.png'/>
-                            
+                            <img class='avatar' src='https://cdn.luogu.com.cn/upload/usericon/10279.png'/>
                           
                         
                       </div>
@@ -619,9 +615,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://hasaik.com/images/avatar.jpg'/>
-                            
+                            <img class='avatar' src='https://hasaik.com/images/avatar.jpg'/>
                           
                         
                       </div>
@@ -641,9 +635,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://www.aomanhao.top/images/Avatar.jpg'/>
-                            
+                            <img class='avatar' src='https://www.aomanhao.top/images/Avatar.jpg'/>
                           
                         
                       </div>
@@ -663,9 +655,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://s2.ax1x.com/2020/02/02/1YPnhR.jpg'/>
-                            
+                            <img class='avatar' src='https://s2.ax1x.com/2020/02/02/1YPnhR.jpg'/>
                           
                         
                       </div>
@@ -685,9 +675,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://raycoder.me/favicon.ico'/>
-                            
+                            <img class='avatar' src='https://raycoder.me/favicon.ico'/>
                           
                         
                       </div>
@@ -707,9 +695,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://linwhitehat.github.io/icons/rabbit512.png'/>
-                            
+                            <img class='avatar' src='https://linwhitehat.github.io/icons/rabbit512.png'/>
                           
                         
                       </div>
@@ -729,9 +715,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='http://eltrac.cn-bj.ufileos.com/other/logo.png'/>
-                            
+                            <img class='avatar' src='http://eltrac.cn-bj.ufileos.com/other/logo.png'/>
                           
                         
                       </div>
@@ -751,9 +735,7 @@
                       <div class='friend-left'>
                         
                           
-                            
-                              <img class='avatar lazyload placeholder' src='https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/avatar/1.jpeg'/>
-                            
+                            <img class='avatar' src='https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/avatar/1.jpeg'/>
                           
                         
                       </div>
@@ -1249,7 +1231,7 @@
 
     <script type="text/javascript">
       $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/asuna.jpg"];
+        var imgs=["https://cdn.jsdelivr.net/gh/hunterqu/cdn/blog/img/bg/4.webp"];
         if ('false' == 'true') {
           function shuffle(arr){
             /*From countercurrent-time*/
@@ -1267,15 +1249,15 @@
           $('').backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         } else {
           $.backstretch(
             imgs,
           {
-            duration: "10000",
-            fade: "1500"
+            duration: "0",
+            fade: "0"
           });
         }
       });
@@ -1292,33 +1274,6 @@
 </script>
 
 
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -1704,10 +1659,5 @@
 
     
   </div>
-<script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</body>
 </html>
