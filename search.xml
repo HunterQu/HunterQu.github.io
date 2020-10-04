@@ -632,11 +632,11 @@
       
         <tags>
             
-            <tag> 贪心 </tag>
-            
             <tag> 入门 </tag>
             
             <tag> 动态规划 </tag>
+            
+            <tag> 贪心 </tag>
             
         </tags>
       
@@ -798,9 +798,9 @@
             
             <tag> 入门 </tag>
             
-            <tag> 动态规划 </tag>
-            
             <tag> 高精度 </tag>
+            
+            <tag> 动态规划 </tag>
             
             <tag> 博弈论 </tag>
             
@@ -991,11 +991,11 @@
       
         <tags>
             
-            <tag> luogu </tag>
-            
             <tag> 队列 </tag>
             
             <tag> 链表 </tag>
+            
+            <tag> luogu </tag>
             
             <tag> 《啊哈！算法！》 </tag>
             
